@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockApp.Utils;
 
@@ -23,6 +16,13 @@ namespace StockApp
             // StockInfoProvider.Start();
             StockInfoProv.Start();
 
+            // "ndvalkov@abv.bg", "nicke23"
+            // new Profile.User().SignUp("ndvalkov@abv.bg", "nicke23");
+            // new Profile.User().SignUp("ndvalkos", "nicke23");
+
+            // new Profile.User().SignIn("ndvalkos@ss.aa", "ddssss");
+
+            new Profile.User().SignIn("ndvalkov@abv.bg", "nicke23");
 
         }
     }

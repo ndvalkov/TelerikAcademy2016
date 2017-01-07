@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace StockApp.Utils
 {
+    // TODO: Remove class, use the other provider
     public static class StockInfoProvider
     {
         // http://stackoverflow.com/questions/38355075/has-yahoo-finance-web-service-disappeared-api-changed-down-temporarily --> last comment
