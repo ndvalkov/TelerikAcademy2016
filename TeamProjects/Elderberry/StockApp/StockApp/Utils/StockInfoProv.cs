@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Windows.Forms;
-using Newtonsoft.Json.Linq;
 
 namespace StockApp.Utils
 {
-    class StockInfoProv
+    static class StockInfoProv
     {
         public static readonly string[] tickers = { "YHOO", "TSLA", "AMZN", "ORCL" };
         public static readonly string urlYahoo =
@@ -17,7 +17,28 @@ namespace StockApp.Utils
         public static readonly string urlOrcl =
                $"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20csv%20where%20url%3D'http%3A%2F%2Fdownload.finance.yahoo.com%2Fd%2Fquotes.csv%3Fs%3D{tickers[3]}%26f%3Dsl1d1t1c1ohgv%26e%3D.csv'%20and%20columns%3D'symbol%2Cprice%2Cdate%2Ctime%2Cchange%2Ccol1%2Chigh%2Clow%2Ccol2'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
+        private static string currentRecord = String.Empty;
+
         public static void Start()
+        {
+            // Request data on first usage
+            ExecuteJSONRequest();
+
+            // TODO: Make use of the populated objects
+            /*var parsedObject1 = JArray.Parse("[" + jsonYahoo + "]");
+            var parsedObject2 = JArray.Parse("[" + jsonTsla + "]");
+            var parsedObject3 = JArray.Parse("[" + jsonAMZN + "]");
+            var parsedObject4 = JArray.Parse("[" + jsonORCL + "]");*/
+
+            StockPersister stockPersister = StockPersister.Instance;
+            stockPersister.AddRecord(currentRecord);
+
+            // Request data on interval
+            RequestTimer mt = new RequestTimer();
+            mt.StartWithCallback(2000, OnTimerElapsed);
+        }
+
+        private static void ExecuteJSONRequest()
         {
             string jsonYahoo = string.Empty;
             string jsonTsla = string.Empty;
@@ -26,6 +47,9 @@ namespace StockApp.Utils
 
             using (var web = new WebClient())
             {
+                bool hasFailed = false;
+                string msg = string.Empty;
+
                 // TODO: Implement custom Exceptions?
                 try
                 {
@@ -36,48 +60,46 @@ namespace StockApp.Utils
                 }
                 catch (ArgumentNullException e)
                 {
-                    // TODO: Refactor
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    MessageBox.Show("Unable to download Stock market info", "", buttons);
-                    return;
+                    hasFailed = true;
+                    msg = e.Message;
                 }
                 catch (WebException e)
                 {
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    MessageBox.Show("Unable to download Stock market info", "", buttons);
-                    return;
+                    hasFailed = true;
+                    msg = e.Message;
                 }
                 catch (NotSupportedException e)
                 {
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    MessageBox.Show("Unable to download Stock market info", "", buttons);
-                    return;
+                    hasFailed = true;
+                    msg = e.Message;
                 }
                 catch (Exception e)
                 {
+                    hasFailed = true;
+                    msg = e.Message;
+                }
+
+                if (hasFailed)
+                {
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    MessageBox.Show("Unable to download Stock market info", "", buttons);
+                    MessageBox.Show("Unable to download Stock market info", msg, buttons);
                     return;
                 }
+
+                IEnumerable<string> tickers = new List<string>(new [] { jsonYahoo, jsonTsla, jsonAMZN, jsonORCL });
+                BuildRecord(tickers);
             }
+        }
 
+        private static void BuildRecord(IEnumerable<string> tickers)
+        {
+            currentRecord = string.Join(Environment.NewLine, tickers);
+        }
 
-            // Google adds a comment before the json for some unknown reason, so we need to remove it
-            // jsonYahoo = jsonYahoo.Replace("//", "");
-
-            // TODO: Make use of the populated objects
-            var parsedObject1 = JArray.Parse("[" + jsonYahoo + "]");
-            var parsedObject2 = JArray.Parse("[" + jsonTsla + "]");
-            var parsedObject3 = JArray.Parse("[" + jsonAMZN + "]");
-            var parsedObject4 = JArray.Parse("[" + jsonORCL + "]");
-
-            /*foreach (var i in v)
-            {
-                var ticker = i.SelectToken("t");
-                var price = (decimal)i.SelectToken("l");
-
-                Console.WriteLine($"{ticker} : {price}");
-            }*/
+        private static void OnTimerElapsed(object sender, EventArgs eventArgs)
+        {
+            StockPersister stockPersister = StockPersister.Instance;
+            stockPersister.AddRecord(currentRecord);
         }
     }
 }

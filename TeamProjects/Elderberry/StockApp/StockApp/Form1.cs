@@ -22,6 +22,8 @@ namespace StockApp
         {
             // StockInfoProvider.Start();
             StockInfoProv.Start();
+
+
         }
     }
 }

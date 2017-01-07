@@ -63,6 +63,10 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\HttpClient.cs" />
+    <Compile Include="Utils\IPersister.cs" />
+    <Compile Include="Utils\RequestTimer.cs" />
+    <Compile Include="Utils\SimpleValidator.cs" />
+    <Compile Include="Utils\StockPersister.cs" />
     <Compile Include="Utils\StockInfo.cs" />
     <Compile Include="Utils\StockInfoProv.cs" />
     <Compile Include="Utils\StockInfoProvider.cs" />
