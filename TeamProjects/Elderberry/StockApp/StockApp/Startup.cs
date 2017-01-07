@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockApp.Utils;
 
 namespace StockApp
 {
-    static class Program
+    static class Startup
     {
         /// <summary>
         /// The main entry point for the application.
