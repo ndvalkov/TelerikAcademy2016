@@ -55,9 +55,20 @@ namespace StockApp.Profile
                 
                 return;
             }
-            
+
 
             // TODO: Sign up successful, notify and redirect to main Form
+            // TODO: Refactor
+            MainForm main = Application.OpenForms["MainForm"] as MainForm;
+
+            if (main != null)
+            {
+                main.ShowDialog();
+            }
+            else
+            {
+                new MainForm().ShowDialog();
+            }
 
             // FirebaseAuthLink authLink = await authProvider.CreateUserWithEmailAndPasswordAsync(email, password);
 
@@ -91,6 +102,7 @@ namespace StockApp.Profile
 
             try
             {
+                // TODO: Figure out what to do with the response
                 var authLink = await authProvider.SignInWithEmailAndPasswordAsync(email, password);
             }
             catch (FirebaseAuthException e)
@@ -103,6 +115,17 @@ namespace StockApp.Profile
 
 
             // TODO: Sign in successful, notify and redirect to main Form
+            // TODO: Refactor
+            MainForm main = Application.OpenForms["MainForm"] as MainForm;
+
+            if (main != null)
+            {
+                main.ShowDialog();
+            }
+            else
+            {
+                new MainForm().ShowDialog();
+            }
 
             // FirebaseAuthLink authLink = await authProvider.CreateUserWithEmailAndPasswordAsync(email, password);
 
