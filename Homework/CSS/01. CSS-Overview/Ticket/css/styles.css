@@ -1,0 +1,74 @@
+body {
+	font-size: 13px;
+}
+
+a {
+	text-decoration: none;
+	color: #C4C78C;
+}
+
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
+.gray {
+	color: #9AAE9E;
+}
+
+table {
+	background-color: #595959;
+	width: 305px;
+	text-align: left;
+	table-layout: fixed;
+}
+
+table th {
+	padding: 5px;
+	font-size: 16px;
+	color:#98A4A4;
+}
+
+table td {
+	padding: 5px;
+}
+
+
+.ticket-label {
+	font-style: italic;
+	color: #fff;
+}
+
+
+label input[type="radio"] {
+	display: none;
+	margin-left: 0px;
+}
+
+label input[type="radio"] ~ span {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 15px;
+}
+
+label input[type="radio"] ~ span:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #71B47A;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+}
+
+label input[type="radio"]:checked ~ span:before {
+  border: 5px solid red;
+}
+

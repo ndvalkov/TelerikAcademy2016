@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		
+		<section id="calculator">
+
+			<header class="float-container">
+				<div id="header-logo-container">
+					<a href="#"><img src="images/calc-logo.png" alt="logo"></a>
+					<h5>Calculator</h5>
+				</div>
+				
+				<div id="header-btns-container">
+					<input type="image" src="images/minimize.png" class="min-window" name="calc-min-window" alt="minimize">
+					<input type="image" src="images/maximize.png" class="max-window" name="calc-max-window" alt="maximize">
+					<input type="image" src="images/close.png" class="close-window" name="calc-close-window" alt="close">
+				</div>
+			</header>
+
+			<article>
+				<nav class="calc-menu">
+					<ul>
+						<li class="calc-menu-item">
+							<a href="#">
+								<span>V</span>iew
+							</a>
+						</li>
+						<li class="calc-menu-item second-item">
+							<a href="#">
+								<span>E</span>dit
+							</a>
+						</li>
+						<li class="calc-menu-item third-item">
+							<a href="#">
+								<span>H</span>elp
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="calc-workspace">
+
+					<form action="calc-workspace-form">
+						
+						<input id="calc-display" type="text" name="calc-display" value="8854455" readonly>
+
+						<div class="calc-prog">
+							<table>
+								<tr>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="calc-prog-decimal-item">
+										<span>63</span>
+									</td>
+									<td colspan="3" class="calc-prog-decimal-item">
+									</td>
+									<td class="calc-prog-decimal-item">
+										<span>47</span>
+									</td>
+									<td colspan="2" class="calc-prog-decimal-item">
+									</td>
+									<td class="calc-prog-decimal-item">
+										<span>32</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">1</a><a href="#">0</a><a href="#">0</a><a href="#">0</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">1</a><a href="#">1</a><a href="#">1</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">0</a><a href="#">0</a><a href="#">1</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">1</a><a href="#">0</a><a href="#">1</a><a href="#">1</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">1</a><a href="#">0</a><a href="#">1</a><a href="#">1</a>
+									</td>
+									<td class="calc-prog-binary-item">
+										<a href="#">0</a><a href="#">1</a><a href="#">1</a><a href="#">1</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="calc-prog-decimal-item">
+										<span>31</span>
+									</td>
+									<td colspan="3" class="calc-prog-decimal-item">
+									</td>
+									<td class="calc-prog-decimal-item">
+										<span>15</span>
+									</td>
+									<td colspan="2" class="calc-prog-decimal-item">
+									</td>
+									<td class="calc-prog-decimal-item">
+										<span>0</span>
+									</td>
+								</tr>
+							</table>
+
+						</div>
+						
+						<div id="calc-inputs-container">
+							
+							<table>
+								<tr>
+									<td rowspan="3" colspan="2">
+										<div class="calc-radio-container">
+											<input type="radio" name="calc-radio-numeral" value="calc-radio-hex">Hex<br>
+											<input type="radio" name="calc-radio-numeral" value="calc-radio-dec" checked>Dec<br>
+											<input type="radio" name="calc-radio-numeral" value="calc-radio-oct">Oct<br>
+											<input type="radio" name="calc-radio-numeral" value="calc-radio-bin">Bin
+										</div>
+									</td>
+									<td>
+										<button class="calc-btn-modifier"><!--empty--></button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">Mod</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">A</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">MC</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">MR</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">MS</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">M+</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">M-</button>
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<button class="calc-btn-operator">(</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">)</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">B</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator left-arrow"><!--left arrow--></button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">CE</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">C</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator plus-minus"><!-- +/- symbols --></button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">&#8730;<!--Sq root symbol--></button>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<button class="calc-btn-operator">RoL</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">RoR</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">C</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">7</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">8</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">9</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">/</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">%</button>
+									</td>
+								</tr>
+
+								<tr>
+									<td rowspan="3" colspan="2">
+										<div class="calc-radio-container bit-container">
+											<input type="radio" name="calc-radio-bit-entry" value="calc-radio-qword" checked>Qword<br>
+											<input type="radio" name="calc-radio-bit-entry" value="calc-radio-dword">Dword<br>
+											<input type="radio" name="calc-radio-bit-entry" value="calc-radio-word">Word<br>
+											<input type="radio" name="calc-radio-bit-entry" value="calc-radio-byte">Byte
+										<div>
+									</td>
+									<td>
+										<button class="calc-btn-operator">Or</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">Xor</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">D</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">4</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">5</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">6</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">*</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">1/x</button>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<button class="calc-btn-operator">Lsh</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">Rsh</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">E</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">1</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">2</button>
+									</td>
+									<td>
+										<button class="calc-btn-digit">3</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">-</button>
+									</td>
+									<td rowspan="2">
+										<button class="calc-btn-operator btn-equals">=</button>
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<button class="calc-btn-operator">Not</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">And</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">F</button>
+									</td>
+									<td colspan="2">
+										<button class="calc-btn-digit digit-zero">0</button>
+									</td>
+									<td>
+										<button class="calc-btn-modifier">.</button>
+									</td>
+									<td>
+										<button class="calc-btn-operator">+</button>
+									</td>
+								</tr>
+
+							</table>
+
+						</div>
+					</form>
+
+				</div>
+
+			</article>
+
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+	background-color: #A9A9A9;
+	text-align: center;
+	font-size: 26px;
+}
+
+footer {
+	font-size: 20px;
+}
+
+h1 {
+	color: #FAFAD2;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	text-align: left;
+	font-size: 20px;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul a {
+	color:#fff;
+}
+
+nav ul a.current {
+	background-color: #D3D3D3;
+}
+
+nav ul li a:hover{
+	text-decoration: underline;
+}
+
+article header, article footer {
+	text-align: left;
+}
+
+article footer a {
+	color: black;
+}
+
+article footer p {
+	font-size: 16px;
+}
+

@@ -1,0 +1,86 @@
+body, div, p, section, article, ul, li, a {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 15px;
+}
+
+.clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/open-sans/OpenSans-Light.ttf);
+}
+
+ul {
+	list-style-type: none;
+}
+
+div#wrapper {
+	width:420px;
+	height: 538px;
+	margin: 0 auto;
+	margin-top: 20px; 
+	background-color: #EEEEEE;
+	border-radius: 5px;
+}
+
+.music-categories div {
+	height:30px;
+}
+
+.music-categories h3 {
+	font-family: OpenSans, Georgia, Serif;
+	font-weight: lighter;
+	margin-left: 12px;
+	margin-top: 15px;
+	float: left;
+}
+
+.music-categories ul li {
+	padding: 0;
+	margin: 0;
+	margin-top: 35px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #fff;
+	border: 1px solid #b3b3b3;
+}
+
+.music-categories article {
+	padding: 15px;
+}
+
+.music-categories p {
+	
+}
+
+.music-categories article img {
+	float: left;
+	border: 1px solid #b3b3b3;
+	margin-right: 15px; 
+}
+
+.music-categories article div.btns {
+	float: right;
+	margin-top: 10px; 
+}
+
+.music-categories button {
+	padding: 3px 15px 3px 18px;
+	background-color: #CC0001;
+	background-image: url("../images/btn-bg.png");
+	background-repeat: no-repeat;
+	background-position: left;
+	border-color: #FF0001;
+	color: #fff;
+}
+
+
+

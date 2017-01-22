@@ -1,0 +1,133 @@
+body, div, p, header, section, input, article, ul, li, a {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after, .clearfix:before {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+	font-family: Verdana, Georgia, Serif;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.btn-link {
+	border:none;
+	outline:none;
+	background:none;
+	cursor:pointer;
+	color:#1BB7F1;
+	padding:0;
+	text-decoration:underline;
+	font-family:inherit;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+form {
+	width: 886px;
+	height: 605px;
+	margin: 0 auto;
+	border: 2px solid black;
+	border-radius: 15px;
+}
+
+form header {
+	margin: 5px;
+	margin-left: 25px;
+	margin-right: 25px;
+	padding: 7px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+
+.main-content {
+	width: 66%;
+	margin: 5px;
+	margin-top: 15px;
+	padding: 5px; 
+	padding-bottom: 20px;
+	border: 2px solid black;
+	border-radius: 3px;
+}
+
+.product-container {
+	width: 270px;
+	margin: 2px;
+	margin-top: 15px;
+	padding: 5px; 
+	display: inline-block;
+	position: relative;
+	border: 2px solid black;
+	border-radius: 3px;
+}
+
+.feature-image {
+	float: left;
+	margin-top: 10px;
+}
+
+.product-name {
+	text-align: center;
+	position: absolute;
+	left: 45px;
+	top: -33px;
+	background-color: white;
+	z-index: 99999;
+}
+
+sub { 
+    vertical-align: sub;
+}
+
+p {
+	padding-top: 29px;
+	color: rgba(0, 0, 0, 0.9);
+	font-weight: bold; 
+}
+
+p span {
+	font-size: 11px;
+}
+
+sub.the-three {
+	vertical-align: bottom;
+	color: rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+}
+
+aside.user-filter {
+	width: 30%;
+	height: 520px;
+	margin-right: 5px;
+	float: right;
+	display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+input[type="range"] {
+	width: 80%;
+}
+
+.range-container {
+	margin: 0 auto;
+}
+
+.range-container div {
+	margin: 15px;
+}

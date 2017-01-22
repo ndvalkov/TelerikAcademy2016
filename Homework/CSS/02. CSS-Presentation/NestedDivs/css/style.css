@@ -1,0 +1,29 @@
+body>div {
+	margin-left: 20px;
+	width: 80%;
+	height: 40px;
+	border-radius: 50px;
+	background-color: red;
+}
+
+body>div>div {
+	margin-right: -10px;
+}
+
+div {
+	border-radius: 50px;
+	background-color: black;
+	border: 1px solid red;
+	padding-right: 8px;
+	margin-right: 7px;
+}
+
+.third, .third>div>div {
+	border: none;
+}
+
+
+
+
+
+

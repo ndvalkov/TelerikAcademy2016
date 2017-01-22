@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Edwardian;
+    src: url(../fonts/edwardian-script-itc/EdwardianScriptITC.ttf);
+}
+
+body {
+	font-size: 16px;
+}
+
+.lorem-ipsum {
+	color: #0094ff;
+	font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+}
+
+.lorem-ipsum::first-line {
+	font-weight: bold;
+}
+
+.lorem-ipsum::first-letter { 
+	font-family: Edwardian;
+	font-size: 2.3rem;
+}
