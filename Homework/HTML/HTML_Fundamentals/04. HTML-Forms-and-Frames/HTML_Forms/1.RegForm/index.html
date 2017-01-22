@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1.Registration Form</title>
+</head>
+<body>
+	<form id="form" method="POST" action="http://some-site.org/">
+		<table border="1" cellspacing="0" cellpadding="5px;">
+			<tr><td colspan="2" align="right">
+					<label for="lastname">
+						<strong>Last Name</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<input type="text" id="lastname" name="lastname" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="firstname">
+						<strong>First Name</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<input type="text" id="firstname" name="firstname" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="address">
+						<strong>Address</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<textarea id="address" name="textarea" rows="5" cols="25"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="city">
+						<strong>City</strong>
+					</label>
+				</td>
+				<td>
+					<input type="text" id="city" name="city" />
+				</td>
+				<td>
+					<label for="state">
+						<strong>State</strong>
+					</label>
+				</td>
+				<td>
+					<label for="state">
+						<input type="text" id="state" name="state" size="4"/>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="postal-code">
+						<strong>Zip/Postal Code</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<input type="text" id="postal-code" name="postal-code" size="6"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="country">
+						<strong>Country</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<select name="country">
+					  <option value="bg" selected>Bulgaria</option> 
+					  <option value="en" >England</option>
+					  <option value="hol">Holand</option>
+					  <option value="mex">Mexico</option> 
+					  <option value="jap">Japan</option>
+					  <option value="usa">USA</option>
+					  <option value="aus">Australia</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="country-code">
+						<strong>Phone (country code,</br> area, number)</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					(+
+					<input type="text" id="country-code" name="country-code" size="5" />
+					)
+					<input type="text" id="area" name="area" size="5" />
+					-
+					<input type="text" id="phone" name="phone" size="10" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="email">
+						<strong>Email</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<input type="email" id="email" name="email" placeholder="nakov@kaspichan.org"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="month">
+						<strong>Birth date</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					Month
+					<input type="number" id="month" name="month" min="1" max="12" />
+					Date
+					<input type="number" id="date" name="date" min="1" max="31" />
+					Year (4 digit)
+					<input type="text" id="year" name="year" size="10"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="gender">
+						<strong>Gender</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<select id="gender" name="gender">
+					  <option value="male">Male</option> 
+					  <option value="female" selected>Female</option>
+					  <option value="unicorn">Uni</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<strong>Starting Date</strong>
+				</td>
+				<td colspan="3">
+					<label>Spring 2016
+						<input type="radio" name="starting-date" value="spring" />
+					</label>
+
+					<label>Summer 2016 
+						<input type="radio" name="starting-date" value="summer" />
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<label for="comments">
+						<strong>Comments/Questions</strong>
+					</label>
+				</td>
+				<td colspan="3">
+					<textarea id="comments" name="comments" rows="7" cols="25" placeholder="please ..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" align="center">
+					<input type="submit" value="Submit" />
+					<input type="reset" value="Clear this form" />
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<!-- Following code will show an alert message with the submitted Form data -->
+	<script type="text/javascript">
+		$( "form" ).on( "submit", function( event ) {
+		  event.preventDefault();
+		  var str = $( this ).serialize();
+		  str = str.replace(/&/g,"\n");
+		  alert( str );
+		});
+	</script>
+</body>
+</html>
