@@ -1,0 +1,53 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".txt" #>
+
+<#  
+	string[] names = new string[]{"Pesho", "Stavri", "Zaharina", "Mehmed"};
+	string[] roles = new string[]{"driver", "secretary", "fitness instructor", "chef"};
+	string[] adjectives = new string[]{"keen", "resourceful", "energetic", "clever"};
+	string[] addValueArr = new string[]{"procrastinates seldom", "eats duneri for lunch", "cares about you", "adds no value, and hates himself"};
+	string[] detailsArr = new string[]{"I attached CV and portfolio", "there is my autobiography", "here is my projects", "some additional details"};
+
+
+	string company = "Na baba Naska magazincheto, EOOD";
+	string name = "";
+	string role = "";
+	string adjective = "";
+	string addValue = "";
+	string details = "";
+
+#>
+
+
+
+<# Random rnd = new Random();
+
+	for (int i = 0; i < 10; i++) { 
+		name = names[rnd.Next(0, 4)];
+		role = roles[rnd.Next(0, 4)];
+		adjective = adjectives[rnd.Next(0, 4)];
+		addValue = addValueArr[rnd.Next(0, 4)];
+		details = detailsArr[rnd.Next(0, 4)];
+#>
+
+Dear <#=name#>:
+I’m writing in response to your recently advertised position for a <#=role#>. I am very interested in this opportunity with <#=company#> 
+and believe that my qualifications, education and professional experience would make me a strong candidate for the position.
+I am a <#=adjective#> professional who <#=addValue#>.
+Enclosed is my resume that more fully details my background and work experience, and how they relate to your position. 
+As you can see, <#=details#>.
+I firmly believe that I can be a valuable asset to your team. 
+I welcome the opportunity to speak with you about this position and how my experience could help <#=company#> achieve its goals.
+Thank you in advance for your consideration.
+Kind regards,
+<#=name#>
+
+<# } #>
+
+
+	
