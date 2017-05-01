@@ -1,0 +1,3 @@
+// Where is the bug :)
+
+package.CompareTo(packageFound) should be < 0 ?
