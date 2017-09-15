@@ -1,0 +1,11 @@
+{
+   "Year":1997,
+   "TransmissionType":0,
+   "ManufacturerName":"Opel",
+   "Model":"Tigra",
+   "Price":5000.0,
+   "Dealer":{
+      "Name":"TA Моторс",
+      "City":"Sofia"
+   }
+}

@@ -1,0 +1,11 @@
+{
+   "Year":2008,
+   "TransmissionType":1,
+   "ManufacturerName":"BMW",
+   "Model":"320i Cabrio",
+   "Price":30000.0,
+   "Dealer":{
+      "Name":"MM Auto",
+      "City":"Sofia"
+   }
+}

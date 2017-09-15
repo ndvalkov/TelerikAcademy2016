@@ -1,0 +1,11 @@
+{
+   "Year":2014,
+   "TransmissionType":0,
+   "ManufacturerName":"Mazda",
+   "Model":"6 Skyactiv",
+   "Price":60000.0,
+   "Dealer":{
+      "Name":"Star Motors",
+      "City":"Sofia"
+   }
+}

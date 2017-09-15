@@ -1,0 +1,11 @@
+{
+   "Year":2003,
+   "TransmissionType":0,
+   "ManufacturerName":"Renaut",
+   "Model":"Clio 1.4",
+   "Price":5500.0,
+   "Dealer":{
+      "Name":"T Моторс",
+      "City":"Sofia"
+   }
+}

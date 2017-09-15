@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cars>
+  <car>
+    <model>0 Skyactiv</model>
+    <price>0</price>
+    <year>2000</year>
+    <transmissionType>Manual</transmissionType>
+    <dealer>
+      <name>Auto Motor</name>
+    </dealer>
+    <manufacturer>
+      <name>Mazda</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>1 Skyactiv</model>
+    <price>1000</price>
+    <year>2001</year>
+    <transmissionType>Automatic</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Ferarri</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>2 Skyactiv</model>
+    <price>2000</price>
+    <year>2002</year>
+    <transmissionType>Manual</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Ferarri</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>3 Skyactiv</model>
+    <price>3000</price>
+    <year>2003</year>
+    <transmissionType>Automatic</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Mazda</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>4 Skyactiv</model>
+    <price>4000</price>
+    <year>2004</year>
+    <transmissionType>Manual</transmissionType>
+    <dealer>
+      <name>Auto Motor</name>
+    </dealer>
+    <manufacturer>
+      <name>Ferarri</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>5 Skyactiv</model>
+    <price>5000</price>
+    <year>2005</year>
+    <transmissionType>Automatic</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Ferarri</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>6 Skyactiv</model>
+    <price>6000</price>
+    <year>2006</year>
+    <transmissionType>Manual</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Mazda</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>7 Skyactiv</model>
+    <price>7000</price>
+    <year>2007</year>
+    <transmissionType>Automatic</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Ferarri</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>8 Skyactiv</model>
+    <price>8000</price>
+    <year>2008</year>
+    <transmissionType>Manual</transmissionType>
+    <dealer>
+      <name>Auto Motor</name>
+    </dealer>
+    <manufacturer>
+      <name>Ferarri</name>
+    </manufacturer>
+  </car>
+  <car>
+    <model>9 Skyactiv</model>
+    <price>9000</price>
+    <year>2009</year>
+    <transmissionType>Automatic</transmissionType>
+    <dealer>
+      <name>Peugeot LTD</name>
+    </dealer>
+    <manufacturer>
+      <name>Mazda</name>
+    </manufacturer>
+  </car>
+</cars>
